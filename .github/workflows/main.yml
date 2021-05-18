@@ -67,5 +67,4 @@ jobs:
       # Push packages to octopus deploy
       - name: Push packages to Octopus
         run: |
-          octo push --package="$GITHUB_WORKSPACE/artifacts/petclinic.web.$PACKAGE_VERSION.war" --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"
           octo push --package="$GITHUB_WORKSPACE/artifacts/petclinic.db.$PACKAGE_VERSION.zip" --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"      
