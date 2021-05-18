@@ -1,0 +1,94 @@
+ja:
+  english: English
+  site_title: Veggie Tracker
+  login: ログイン
+  logout: ログアウト
+  dashboard: ダッシュボード
+  username: ユーザー名
+  email: メールアドレス
+  password: パスワード
+  login_form:
+    need_account: アカウントをお持ちじゃない方：
+    create_now: こちらで登録
+  signup: 
+    title: アカウントを作る
+    submit: サインアップ
+  onboarding: 
+    welcome: ようこそ！ベジトラッカーへ!
+    catchphrase: その月に植える予定の野菜をお知らせしてくれるシンプルなアプリです。
+    signup_button: サインアップ
+    have_account: 既にアカウントをお持ちの方：
+    login_now: こちらでログイン
+  this_month:
+    title: "%{month}に植える野菜"
+    no_farms: ファームはまだありません！
+    add_farm: ファームを追加する
+    no_veggies: 今月は植える野菜がない！リラックスできますね。
+    add_veggie: 野菜を追加する
+    dashboard_link: ダッシュボードを見る
+  users:
+    show:
+      subtitle:
+        farms: 私のファーム
+        veggies: 私の野菜
+      no_farms: ファームはまだありません！
+      no_veggies: 野菜はまだありません！
+      create_now: 今作る。
+  farms:
+    show:
+      subtitle:
+        veggies: 野菜
+      no_veggies: このファームには、まだ野菜がありません！
+      add_veggie: 野菜を追加する
+      edit_button: ファームを編集する
+    form:
+      name: ファームの名前
+      location: ファームの場所
+      delete: ファームを削除
+      new:
+        title: 新しいファームを作る
+        submit: ファームを追加
+      edit:
+        title: ファームを編集する
+        submit: ファームを保存
+  vegetables:
+    show:
+      months: 植える月
+      edit_button: 野菜を編集
+      add_another: 野菜を追加する
+    form:
+      details: 野菜の詳細
+      name: 野菜の名前
+      planting_months: 植える月
+      farms: ファーム
+      delete: 野菜を削除
+      new:
+        title: 新しい野菜を追加する
+        submit: 野菜を追加
+      edit:
+        title: 野菜を編集する
+        submit: 野菜を保存
+    vegetables_by_months:
+      title: 毎月の野菜
+      see_all: 全ての月を見る
+      no_veggies: この月には、野菜がありません。
+      add_now: 野菜を追加する。
+  date:
+    month_names: [~, "1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+    abbr_month_names: [~, "1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+  notices:
+    general_error: あら！エラーが起こりました。もう一度トライしてみてください。
+    login_required: それをするにはログインが必要です！
+    not_authorized: それはできません！
+    missing_fields: 全部の項目を入力してください。
+    signup:
+      welcome: アカウントができました！ようこそ、%{username}！
+      email_taken: このメールアドレスは既に使われています。
+      name_taken: このユーザー名は既に使われています。
+      error: エラーが起こりました。もう一度フォームを入力してみてください。
+    login:
+      param_error: ユーザー名またはパスワードが正しくなかったです。もう一度ログインしてください。
+    not_found:
+      user: このユーザーは見つかりません。
+      farm: このファームは見つかりません。
+      vegetable: この野菜は見つかりません。

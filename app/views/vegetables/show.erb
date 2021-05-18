@@ -1,0 +1,29 @@
+<section class="vegetable card">
+  <div class="card-header">
+    <h1><%= @vegetable.name %></h1>
+    <span class="card-meta">
+    <% @vegetable.farms.each do |farm| %>
+      <a href="/<%= I18n.locale %>/farms/<%= farm.id %>/<%= farm.slug %>"><%= farm.name %></a><%= ' | ' unless farm == @vegetable.farms.last %>
+    <% end %>
+    </span>
+  </div>
+
+  <div class="card-body">
+    <h2><%= t('vegetables.show.months') %></h2>
+    <ul>
+    <% @vegetable.planting_season_month_names.each do |month| %>
+      <li><%= month %></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <% if current_user == @vegetable.user || @vegetable.farms.first.user = current_user #temp check to account for late addition of user_id to vegetables %>
+    <div class="card-footer">
+      <a href="/<%= I18n.locale %>/vegetables/<%= @vegetable.id %>/edit" class="card-link"><%= t('vegetables.show.edit_button') %></a>
+    </div>
+  <% end %>
+</section>
+
+<div class="below-card">
+  <a class="btn btn-info" href="/<%= I18n.locale %>/vegetables/new"><%= t('vegetables.show.add_another') %></a>
+</div>

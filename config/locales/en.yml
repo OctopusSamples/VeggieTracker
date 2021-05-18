@@ -1,0 +1,94 @@
+en:
+  japanese: 日本語
+  site_title: Veggie Tracker
+  login: Login
+  logout: Logout
+  dashboard: My Dashboard
+  username: Username
+  email: Email
+  password: Password
+  login_form:
+    need_account: Don't have an account?
+    create_now: Create one now
+  signup:
+    title: Sign up for Veggie Tracker
+    submit: Sign up
+  onboarding: 
+    welcome: Welcome to Veggie Tracker!
+    catchphrase: Veggie Tracker is a simple way to keep track of which vegetables you need to plant every month.
+    signup_button: Sign up
+    have_account: Have an account?
+    login_now: Login now
+  this_month:
+    title: Veggies to plant in %{month}
+    no_farms: You don't have any farms yet!
+    add_farm: Add a farm now.
+    no_veggies: There are no veggies to plant this month! Go and relax ;)
+    add_veggie: Add another veggie
+    dashboard_link: Go to Dashboard
+  users:
+    show:
+      subtitle:
+        farms: My Farms
+        veggies: My Veggies
+      no_farms: You don't have any farms yet!
+      no_veggies: You don't have any veggies yet!
+      create_now: Create one now.
+  farms:
+    show:
+      subtitle:
+        veggies: Veggies
+      no_veggies: There aren't any veggies for this farm yet!
+      add_veggie: Add a veggie
+      edit_button: Edit farm
+    form:
+      name: Name of the Farm
+      location: Location
+      delete: Delete farm
+      new:
+        title: Create a new farm
+        submit: Add farm
+      edit:
+        title: Edit farm
+        submit: Save farm
+  vegetables:
+    show:
+      months: Months to plant
+      edit_button: Edit veggie
+      add_another: Add another veggie
+    form:
+      details: Veggie details
+      name: Name of vegetable
+      planting_months: Planting months
+      farms: Farms
+      delete: Delete veggie
+      new:
+        title: Add a veggie
+        submit: Add veggie
+      edit:
+        title: Edit veggie
+        submit: Save veggie
+    vegetables_by_months:
+      title: Vegetables by month
+      see_all: See all months
+      no_veggies: There are no veggies for this month.
+      add_now: Add a veggie now.
+  date:
+    month_names: [~, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    abbr_month_names: [~, "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  notices:
+    general_error: Oops, something went wrong! Please try again.
+    login_required: You need to be logged in to do that!
+    not_authorized: You aren't permitted to do that!
+    missing_fields: Please fill in all the fields.
+    signup:
+      welcome: You've successfully signed up! Welcome %{username}!
+      email_taken: This email is already taken.
+      name_taken: This name is already taken.
+      error: Looks like something went wrong. Try the form again.
+    login:
+      param_error: Your username or password was incorrect! Please try again.
+    not_found:
+      user: This user doesn't seem to exist...
+      farm: This farm doesn't seem to exist...
+      vegetable: This vegetable doesn't seem to exist...

@@ -1,0 +1,31 @@
+<section class="farm card">
+  <div class="card-header">
+    <h1><%= @farm.name %></h1>
+    <span class="card-meta">
+      <%= @farm.location %>
+    </span>
+  </div>
+
+  <div class="card-body">
+    <h2><%= t('farms.show.subtitle.veggies') %></h2>
+    <% if @farm.vegetables.any? %>
+      <ul>
+      <% @farm.vegetables.each do |vegetable| %>
+        <li><a href="/<%= I18n.locale %>/vegetables/<%= vegetable.id %>"><%= vegetable.name %></a></li>
+      <% end %>
+      </ul>
+    <% else %>
+      <p><%= t('farms.show.no_veggies') %></p>
+    <% end %>
+
+    <% if @farm.user == current_user %>
+      <a href="/<%= I18n.locale %>/vegetables/new" class="btn btn-outline-info btn-sm">+ <%= t('farms.show.add_veggie') %></a>
+    <% end %>
+  </div>
+
+  <% if @farm.user == current_user %>
+    <div class="card-footer">
+      <a href="/<%= I18n.locale %>/farms/<%= @farm.id %>/<%= @farm.slug %>/edit"><%= t('farms.show.edit_button') %></a>
+    </div>
+  <% end %>
+</section>

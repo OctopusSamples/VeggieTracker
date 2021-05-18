@@ -1,0 +1,5 @@
+<% if logged_in? %>
+  <%= erb :'partials/this-month' %>
+<% else %>
+  <%= erb :'partials/onboarding' %>
+<% end %>
