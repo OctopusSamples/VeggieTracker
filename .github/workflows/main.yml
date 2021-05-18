@@ -29,7 +29,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6
-      
+
+      # Set the build version number
+      - name: Set Version
+        run: echo "PACKAGE_VERSION=$(date +'%Y.%m.%d').$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: |
           # Set the default gem installation path to a directory alongside the Ruby application code.
@@ -44,3 +48,24 @@ jobs:
 
           # Use bundler to install the other dependencies
           bundle install
+
+      # Install Octopus action
+      - name: Install Octopus CLI
+        uses: OctopusDeploy/install-octopus-cli-action@v1.1.1
+        with:
+          version: latest
+
+      # Create artifacts folder
+      - name: Create artifacts folder
+        run: mkdir "$GITHUB_WORKSPACE/artifacts"
+
+      # Package VeggieTracker.Web
+      - name: Package Flyway
+        run: |
+          octo pack --id="VeggieTracker.Web" format="Zip" --version="$PACKAGE_VERSION" --basePath="$GITHUB_WORKSPACE" --outFolder="$GITHUB_WORKSPACE/artifacts"
+
+      # Push packages to octopus deploy
+      - name: Push packages to Octopus
+        run: |
+          octo push --package="$GITHUB_WORKSPACE/artifacts/petclinic.web.$PACKAGE_VERSION.war" --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"
+          octo push --package="$GITHUB_WORKSPACE/artifacts/petclinic.db.$PACKAGE_VERSION.zip" --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"      
