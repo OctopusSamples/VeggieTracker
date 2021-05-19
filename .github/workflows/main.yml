@@ -28,7 +28,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: latest
+          ruby-version: 2.7
 
       # Set the build version number
       - name: Set Version
