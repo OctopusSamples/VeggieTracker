@@ -80,4 +80,4 @@ jobs:
       # Deploy release
       - name: Deploy release
         run: |
-          octo deploy-release --project="Veggie Tracker" --deployTo="Development" --progress --waitForDeployment --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"
+          octo deploy-release --project="Veggie Tracker" --deployTo="Development" --version="latest" --progress --waitForDeployment --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"
