@@ -9,6 +9,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: "0 07 * * *"        
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -69,3 +71,8 @@ jobs:
       - name: Push packages to Octopus
         run: |
           octo push --package="$GITHUB_WORKSPACE/artifacts/VeggieTracker.Web.$PACKAGE_VERSION.zip" --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"      
+      
+      # Create release
+      - name: Create release
+        run: |
+          octo create-release --project="VeggieTracker"
