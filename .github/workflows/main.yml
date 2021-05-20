@@ -45,9 +45,9 @@ jobs:
 
           # Install the specific version of Bundler defined in the Gemfile.lock file
           gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
-          gem install bcrypt --platform x86_64-linux-gnu
-          gem install pg --platform x86_64-linux-gnu
-          gem install puma --platform x86_64-linux-gnu
+          gem install bcrypt --platform ruby
+          gem install pg --platform ruby
+          gem install puma --platform ruby
 
           # Use bundler to install the other dependencies
           bundle platform
