@@ -47,7 +47,7 @@ jobs:
           gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
           gem install bcrypt --platform x86_64-linux-gnu
           gem install pg --platform x86_64-linux-gnu
-          gem install puma --x86_64-linux-gnu
+          gem install puma --platform x86_64-linux-gnu
 
           # Use bundler to install the other dependencies
           bundle platform
