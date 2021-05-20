@@ -15,10 +15,10 @@ gem 'tux'
 gem 'i18n'
 gem 'dotenv'
 #gem 'pg', '1.2.3'
-gem 'pg', :platforms => :x86_64-linux-gnu
+gem 'pg'
 #gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
-gem 'bcrypt', :platforms => :x86_64-linux-gnu
-gem 'puma', :platforms => :x86_64-linux-gnu
+gem 'bcrypt'
+gem 'puma'
 gem 'rack', '2.2.3'
 
 #group :development, :test do
