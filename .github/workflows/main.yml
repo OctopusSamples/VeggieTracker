@@ -75,4 +75,4 @@ jobs:
       # Create release
       - name: Create release
         run: |
-          octo create-release --project="VeggieTracker"
+          octo create-release --project="VeggieTracker" --server="${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey="${{ secrets.OCTOPUS_API_KEY }}" --space="${{ secrets.OCTOPUS_SERVER_SPACE }}"
