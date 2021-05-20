@@ -63,7 +63,7 @@ jobs:
         run: mkdir "$GITHUB_WORKSPACE/artifacts"
 
       # Package VeggieTracker.Web
-      - name: Package Flyway
+      - name: Package VeggieTracker.Web
         run: |
           octo pack --id="VeggieTracker.Web" --format="Zip" --version="$PACKAGE_VERSION" --basePath="$GITHUB_WORKSPACE" --outFolder="$GITHUB_WORKSPACE/artifacts"
 
